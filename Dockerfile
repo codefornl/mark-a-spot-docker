@@ -6,7 +6,7 @@ RUN a2enmod rewrite
 RUN apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get -yq install \
     libpng12-dev \
-    libjpeg-dev \ 
+    libjpeg-dev \
     libpq-dev \
     drush \
     zip git \
@@ -16,5 +16,5 @@ RUN apt-get update && \
 
 WORKDIR /var/www/html
 
-RUN git clone --recursive https://github.com/codefornl/mark-a-spot.git /var/www/html
-RUN chown -R www-data:www-data sites
+# RUN git clone --recursive https://github.com/codefornl/mark-a-spot.git /var/www/html
+RUN chown -R www-data:www-data /var/www/html/sites
